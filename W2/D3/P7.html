@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card: headers and footers,equal height</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+</head>
+<body>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-xl shadow-sm p-6 overflow-hidden flex flex-col transition duration-300 ease-out hover:-transalate-y-2 hover:shadow-lg">
+            <header class="border flex item-center justify-betweeen">
+                <h2>Basic Version</h2>
+            </header>
+            <div class="p-6 space-y-2 flex-1"> 
+                <p>RS.1000/-</p>
+            </div>
+            <footer class="border-t px-6 py-4 flex justify-end gap-3">
+                <button class="px-4 py-2 rounded border hover:bg-gray-50 transition">Details</button>
+                <button class="px-4 py-2 rounded border hover:bg-gray-500 transition">Purchase</button>
+
+            </footer>
+        </article>
+        <article class="rounded-xl shadow-sm p-6 overflow-hidden flex flex-col transition duration-300 ease-out hover:-transalate-y-2 hover:shadow-lg">
+            <header class="border flex item-center justify-betweeen">
+                <h2>Intermediate Version</h2>
+                <p class="flex-grow text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas molestiae corporis perspiciatis excepturi officia! Expedita voluptatum voluptas nulla incidunt tempore cumque quis officia iure debitis quo voluptatibus sint, corrupti facilis?</p>
+            </header>
+            <div class="p-6 space-y-2 flex-1"> 
+                <p>RS.1000/-</p>
+            </div>
+            <footer class="border-t px-6 py-4 flex justify-end gap-3">
+                <button class="px-4 py-2 rounded border hover:bg-gray-50 transition">Details</button>
+                <button class="px-4 py-2 rounded border hover:bg-gray-500 transition">Purchase</button>
+
+            </footer>
+        </article>
+        </section>
+
+</body>
+</html>
