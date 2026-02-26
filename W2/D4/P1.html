@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal overlay</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+</head>
+<body>
+    <!-- Modal overlay positioning(fixed+ inset-0) -->
+     <main class="max-w-4xl mx-auto p-6 space-y-8">
+      <section class="border rounded p-6 space-y-4">
+        <h2>Modal Demo</h2>
+        <div class="overflow-auto h-72 border rounded p-4 ">
+          <div class="space-y-3">
+            <p>Content behind a modal</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sit quo harum nesciunt! Neque, quidem molestiae eligendi minus eius ipsam. Labore illo ea et facilis harum eligendi nobis dolorum sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cum facere quo ex repudiandae unde optio deleniti dolore aut reiciendis? Voluptates voluptas quod aspernatur labore eligendi,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officiis labore incidunt laboriosam? Dolores eum numquam, culpa consectetur eos, atque repellendus aut ratione obcaecati unde totam eveniet, illo quibusdam. Cupiditate? fugiat eum eveniet. Facilis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque reiciendis officia sunt qui pariatur! Nesciunt, quam minus nisi ipsa voluptates et similique magnam, odio sapiente fuga at dolorum dolores molestias.Sint in perspiciatis ullam excepturi sapiente unde illum aliquid alias, quos provident. Fugiat iusto suscipit aliquam, quaerat voluptatum ipsum repellendus maxime vel!
+            </p>
+         </div>
+        </div>
+        <div class="fixed inset-0  border-dashed pointer-events-none">
+            <div class="absolute top-4 left-4 border rounded px-3 py-2">
+                Overlay: Fixed inset-0
+            </div>
+        </div>
+      </section>
+     </main>
+</body>
+</html>
