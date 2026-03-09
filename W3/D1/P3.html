@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Variables</title>
+</head>
+<body>
+    <pre id="out"></pre>
+    <button id="runBtn" class="px-3 py-1 text-white rounded mt-2 mb-2 bg-black">
+       Run
+    </button>
+    <script>
+        const out = document.getElementById("out");
+        function print(...args){
+        //console 
+           console.log(...args);
+            out.textContent+=args.join("")+"\n";
+        }
+        function clearOut () {
+            out.textContent = "";
+        }
+        function run () {
+            clearOut ();
+            if(true){
+                var x = "var escapes the if-block";
+            }
+            print("x=",x);
+            // let:scope
+            if(true){
+                let y = "let escapes the if-block";
+                print("y inside block=",y);
+            }
+            //print("y inside block=",y);
+            print("Before declaration",testvar);
+            var testvar = "Assigned value now";
+            print("After declaration",testvar);
+
+            try{
+                print("Before let declaration",testLet);
+            }
+            catch(e){
+                print("Accessing let befoer dec. cause",e.name,e.message);
+            } 
+            let testLet = "declared now"
+            print("after let declaration",testLet);
+        }
+       document.getElementById("runBtn").addEventListener("click",run);  
+    </script>
+</body>
+</html>
