@@ -1,4 +1,4 @@
-//sequenstial v/s parallel promise execution
+//sequenstial vs parallel promise execution
 function taskA(){
     return new Promise(function(resolve) {
         setTimeout(function(){
