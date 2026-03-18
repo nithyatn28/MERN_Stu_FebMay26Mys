@@ -1,4 +1,4 @@
-//why use async/await
+//why use of async/await
 function getUser(){
     return new Promise((resolve) => {
         setTimeout(function() {
