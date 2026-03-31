@@ -1,0 +1,21 @@
+//sending JSON response in express
+const express = require("express");
+
+const app =express();
+app.get("/api/status",function(req,res){
+    //res.JSON() automaticaly serializes the object and set the JSON content type
+    res.json({
+        success:true,
+        message:"Express API is working"
+    });
+});
+app.get("/api/error",function(req,res){
+    //res.JSON() automaticaly serializes the object and set the JSON content type
+    res.status(404).json({
+        success:false,
+        message:"Requested resourse is not found"
+    });
+});
+app.listen(4000,function(){
+    console.log("Express sever running at http://localhost:4000");
+});
