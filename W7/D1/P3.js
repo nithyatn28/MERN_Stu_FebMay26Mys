@@ -4,7 +4,13 @@ const express = require("express");
 const app =express();
 app.get("/users",function(req,res){
     //To read
-    res.send("Returning all users");
+    
+    res.status(200).json([{message:"success"},
+        {id:1,name:"Nithya"},
+        {id:2,name:"Nishu"},
+        {id:3,name:"ani"},
+    ]);
+    res.status(201).send("Returning all users");
 });
 //To create
 app.post("/users",function(req,res){
