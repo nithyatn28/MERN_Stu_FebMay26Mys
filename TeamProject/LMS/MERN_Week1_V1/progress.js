@@ -6,7 +6,7 @@ async function markLesson(courseId, lesson) {
     const course = user.enrolledCourses.find(c => c.id == courseId);
 
     if (!course) {
-      emitter.emit("operationFailed", "Not enrolled");
+      //emitter.emit("operationFailed", "Not enrolled");
       throw "Not enrolled";
     }
 

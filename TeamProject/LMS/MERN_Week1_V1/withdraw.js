@@ -5,7 +5,7 @@ function withdrawCourse(courseId) {
   const course = user.enrolledCourses.find(c => c.id == courseId);
 
   if (!course) {
-    emitter.emit("operationFailed", "Course not found in enrolled list");
+    //emitter.emit("operationFailed", "Course not found in enrolled list");
     return;
   }
 
@@ -13,7 +13,7 @@ function withdrawCourse(courseId) {
     c => c.id != courseId
   );
 
-  emitter.emit("courseWithdrawn", course.title);
+  //emitter.emit("courseWithdrawn", course.title);
 }
 
 module.exports = { withdrawCourse };

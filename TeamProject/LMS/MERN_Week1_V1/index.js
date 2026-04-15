@@ -52,7 +52,7 @@ LMS MENU
     switch (choice) {
 
       case "1":
-        emitter.emit("courseViewed");
+        //emitter.emit("courseViewed");
         courses.forEach(c =>
           console.log(`${c.id}. ${c.title} (${c.instructor})`)
         );
