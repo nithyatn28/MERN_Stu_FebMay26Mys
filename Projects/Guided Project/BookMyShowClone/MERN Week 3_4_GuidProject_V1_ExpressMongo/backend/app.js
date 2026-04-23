@@ -1,11 +1,24 @@
 const express = require("express");
+const authRoutes = require("./src/routes/auth.routes");
+const movieRoutes = require("./src/routes/movie.routes");
+const bookingRoutes = require("./src/routes/booking.routes");
+const showsRoutes = require("./src/routes/show.routes");
 
 const app = express();
 
-app.use("/",(req,res) =>{
+app.use(express.json());
+app.use("/api/auth",authRoutes);
+app.use("/api/movies",movieRoutes);
+app.use("/api/booking",bookingRoutes);
+app.use("/api/shows",showsRoutes);
+
+//Base URL
+app.get("/",(req,res)=>{
     res.status(200).json({
         success:true,
-        message:"Movie booking Api is running...",
+        message: "Movie booking API is running...",
     });
 });
+
+
 module.exports = app;
