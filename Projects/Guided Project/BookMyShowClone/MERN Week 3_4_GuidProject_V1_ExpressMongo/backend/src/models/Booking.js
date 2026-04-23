@@ -1,30 +1,30 @@
 const mongoose = require("mongoose");
 const bookingSchema = new mongoose.Schema({
     userId:{
-        type:mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref:"User",
         required:true,
-        index:true
+        index:true,
     },
     showId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Show",
         required:true,
-        index:true
+        index:true,
     },
-    seates:{
-        type:String,
+    seats:{
+        type:[String],
         required:true,
     },
-    totalSeates:{
+    totalSeats:{
         type:Number,
-        required:true
+        required:true,
     },
     status:{
         type:String,
         enum:["booked","cancelled"],
         default:"booked",
-        index:true
+        index:true,
     },
     bookingTime:{
         type:Date,
@@ -32,22 +32,20 @@ const bookingSchema = new mongoose.Schema({
     },
 },
 {
-    timestamps:true
+    timestamps:true,
+});
 
-}
-);
-
-//add validation 
-bookingSchema.pre("save",function(next){
-    if(this.seates.length === 0){
-        return next(new Error("At least one seat must be selected"));
+//Add validation
+bookingSchema.pre("save",function (next) {
+    if (this.seats.length === 0) {
+        throw new Error("At least one seat must be selected");
     }
-    if(this.totalSeates!=this.seates.length){
-        return next(new Error("Seat count missmatch"));
+    if(this.totalSeats!=this.seats.length){
+        throw new Error("Seat count mismatch");
     }
     next();
 });
-//compound index
+//Compound index
 bookingSchema.index({userId:1,showId:1});
 
 module.exports = mongoose.model("Booking",bookingSchema);
