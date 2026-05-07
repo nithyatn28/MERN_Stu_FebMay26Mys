@@ -1,3 +1,7 @@
+//Stop event propagation
+//event.stopPropogation();
+// :stops the event from the bubling to the parent element
+//useful when child and parent both have event handler
 export function EventObj() {
     const handleParentClick = (event)=>{
         alert(`Parent clicked target: ${event.target.tagName} current targe:${event.currentTarget.tagName}`);
