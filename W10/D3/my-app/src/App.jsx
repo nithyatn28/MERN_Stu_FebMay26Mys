@@ -1,6 +1,11 @@
 import { EventObject } from './components/P2'
 import { EventBasics } from './components/P1'
 import { PassingArguments } from './components/P3'
+import { UseCallbackEvents } from './components/P5'
+import { EventDelegation } from './components/P6'
+import { FromsPatterns } from './components/P7'
+import { KeyboardEvent } from './components/P8'
+import { EventObj } from './components/P9'
 import './App.css'
 
 function App() {
@@ -10,7 +15,12 @@ function App() {
     <>
       {/* < EventBasics /> */}
       {/* < EventObject /> */}
-      < PassingArguments />
+      {/* < PassingArguments /> */}
+      {/* < UseCallbackEvents /> */}
+      {/* < FromsPatterns /> */}
+      {/* < EventDelegation /> */}
+      {/* <  KeyboardEvent /> */}
+      <  EventObj />
     </>
   )
 }
